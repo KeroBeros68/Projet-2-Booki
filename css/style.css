@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;  /** forcage des marge a 0 **/
 }
 
 :root {
@@ -9,9 +10,15 @@
     --filter-bg-color: #DEEBFF;
 }
 
-body{
+body{   /* centre le contenu sur la page */
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1440px; /* taille max de la page */
+    margin: auto;
 }
 
 a {
