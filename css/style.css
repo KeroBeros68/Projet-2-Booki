@@ -1,7 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    margin: 0;     /** forcage des marge a 0 **/
+    margin: 0;  /** forcage des marge a 0 **/
 }
 
 :root {
@@ -10,7 +10,7 @@
     --filter-bg-color: #DEEBFF;
 }
 
-body{
+body{   /* centre le contenu sur la page */
     display: flex;
     justify-content: center;
 }
@@ -37,14 +37,13 @@ header{
 .logo{
     width: 61.09px;
     height: 19px;
-    padding: 30px 50px 30px 50px;
-    object-fit: contain;
+    padding: 30px 50px 30px 50px;   /* redimensionne le container pour ajuster la taille du logo */
+    object-fit: contain;    /* force les dimension du logo a la taille du container */
 }
 
 nav{
     width: 244px;
-    height: 35px;
-    padding: 0 50px;
+    padding: 0px 50px;  /* position du menu par rapport a la marge */
     display: flex;
     justify-content: space-between;
 }
@@ -52,10 +51,29 @@ nav{
 nav a{
     height: 35px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end;  /* colle le lien au bas du container */
 }
 nav a:hover{
     border-top: var(--main-color) 2px solid;
-    height: 33px;      /** réduction de la taille de 2px pour prise en compte largeur bordure **/
+    height: 33px;   /** réduction de la taille de 2px pour prise en compte largeur bordure **/
     color: var(--main-color);
 }
+
+/****** Main ************/
+
+main{
+    margin: 35px 0px;   /* espace entre le header et le main */
+    padding: 0px 50px;  /* position du main par rapport aux marges */
+}
+
+h1{
+    font-size: 22px;
+    height: 26px;
+    margin-bottom: 8px; /* espace entre le titre et le paragraphe */
+}
+
+.headline{  /* dimensions du headline par rapport a la maquette */
+    height: 53px;
+    margin-bottom: 35px;
+}
+
