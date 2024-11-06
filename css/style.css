@@ -25,3 +25,113 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+/****** Main ************/
+
+main{
+    margin: 35px 0px;   /* espace entre le header et le main */
+    padding: 0px 50px;  /* position du main par rapport aux marges */
+}
+
+h1{
+    font-size: 22px;
+    height: 26px;
+    margin-bottom: 8px; /* espace entre le titre et le paragraphe */
+}
+
+.headline{  /* dimensions du headline par rapport a la maquette */
+    height: 53px;
+    margin-bottom: 35px;
+}
+
+/** recherche **/
+
+.formRecherche{  /* dimensions du bloc recherche + mise en ligne des éléments */
+    display: flex;
+    flex-direction: row;
+    width: 377px;
+    height: 49px;
+}
+
+.fa-location-dot{   /* icone loupe */
+    width: 48px;
+    height: 47px;
+    border: var(--main-bg-color) 1px solid;
+    border-radius: 15px 0px 0px 15px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.champsRecherche{   /* champs de saisie de la recherche */
+    width: 195px;
+    height: 47px;
+    padding: 0px;
+    border: var(--main-bg-color) 1px solid;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btnRecherche{  /* validation de la recherche */
+    width: 130px;
+    height: 49px;
+    background-color: var(--main-color);
+    border: var(--main-color) 1px solid;
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/** Filtres **/
+
+.filtresContainer{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    gap: 15px;
+}
+
+.filtresContainer h2{
+    width: 54px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.groupeFiltres{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filtres{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: inherit;
+    border: #D9D9D9 2px solid;
+    border-radius: 25px;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+}
+
+.filtres:hover{
+    background-color: var(--filter-bg-color);
+    cursor: pointer;
+}
+
+.filtres i{
+    font-size: 20px;
+    color:var(--main-color);
+}
+
+.filtres h3{
+    font-size: 17px;
+    font-weight: 700;
+}
