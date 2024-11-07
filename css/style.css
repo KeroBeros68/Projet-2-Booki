@@ -79,7 +79,6 @@ h1{
 
 .headline{  /* dimensions du headline par rapport a la maquette */
     height: 53px;
-    margin-bottom: 35px;
 }
 
 /** recherche **/
@@ -105,7 +104,7 @@ h1{
 .champsRecherche{   /* champs de saisie de la recherche */
     width: 195px;
     height: 47px;
-    padding: 0px;
+    padding: 0px;   /* ajuste la border pour coller a celle du bouton et de l'icone */
     border: var(--main-bg-color) 1px solid;
     text-align: center;
     font-size: 18px;
@@ -126,15 +125,14 @@ h1{
 
 /** Filtres **/
 
-.filtresContainer{
+.filterBar{
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin-top: 35px;
     gap: 15px;
 }
 
-.filtresContainer h2{
+.filterBar h2{
     width: 54px;
     display: flex;
     align-items: center;
@@ -159,11 +157,6 @@ h1{
     gap: 10px;
 }
 
-.filtres:hover{
-    background-color: var(--filter-bg-color);
-    cursor: pointer;
-}
-
 .filtres i{
     font-size: 20px;
     color:var(--main-color);
@@ -172,4 +165,9 @@ h1{
 .filtres h3{
     font-size: 17px;
     font-weight: 700;
+}
+
+.filtres:hover{
+    background-color: var(--filter-bg-color);
+    cursor: pointer;
 }
