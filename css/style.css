@@ -29,3 +29,36 @@ a {
 .margeBot{
     margin-bottom: 35px;
 }
+
+/****** Header ***********/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 79px;
+}
+
+.logo{
+    width: 61.09px;
+    height: 19px;
+    padding: 30px 50px 30px 50px;   /* redimensionne le container pour ajuster la taille du logo */
+    object-fit: contain;    /* force les dimension du logo a la taille du container */
+}
+
+nav{
+    width: 244px;
+    padding: 0px 50px;  /* position du menu par rapport a la marge */
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    height: 35px;
+    display: flex;
+    align-items: flex-end;  /* colle le lien au bas du container */
+}
+nav a:hover{
+    border-top: var(--main-color) 2px solid;
+    height: 33px;   /** réduction de la taille de 2px pour prise en compte largeur bordure **/
+    color: var(--main-color);
+}
