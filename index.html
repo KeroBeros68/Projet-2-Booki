@@ -19,8 +19,7 @@
 
 <body>
     <div class="main-container">  <!-- assure le centrage de la page -->
-        <header>
-            <header class="margeBot">
+        <header class="margeBot">
                 <img class="logo" src="images/logo/Booki.png" alt="logo booki">
                 <nav>
                     <a href="#">Hébergements</a>
@@ -28,6 +27,49 @@
                 </nav>
         </header>
         <main>
+            <section class="margeBot">
+                <div class="headline margeBot">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
+
+                <div class="margeBot">      
+                    <form class="formRecherche" method="get" action="">
+                        <label for="recherche" ><i class="fa-solid fa-location-dot fa-lg"></i></label>
+                        <input class="champsRecherche" type="text" name="recherche" id="recherche" placeholder="Marseille, France">
+                        <input class="btnRecherche" type="submit" value="Recherche">
+                    </form>
+                </div>
+
+                <div class="filterBar margeBot">
+                    <h2>Filtres</h2>
+                    <div class="groupeFiltres">
+                        <button class="filtres">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <h3>Économique</h3>
+                        </button>
+                        <button class="filtres">
+                            <i class="fa-solid fa-person"></i>
+                            <h3>Familial</h3>
+                        </button>
+                    </div>
+                    <div class="groupeFiltres">
+                        <button class="filtres">
+                            <i class="fa-solid fa-heart"></i>
+                            <h3>Romantique</h3>
+                        </button>
+                        <button class="filtres">
+                            <i class="fa-solid fa-fire"></i>
+                            <h3>Nos pépites</h3>
+                        </button>
+                    </div>
+                </div>
+                <div class="infoBar">
+                    <i class="fa-solid fa-info fa-xs"></i>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section>
+
         </main>
         <footer></footer>
     </div>
