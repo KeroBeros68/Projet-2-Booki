@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+.margeBot{
+    margin-bottom: 35px;
+}
+
 /****** Header ***********/
 
 header{
@@ -59,21 +63,4 @@ nav a:hover{
     color: var(--main-color);
 }
 
-/****** Main ************/
-
-main{
-    margin: 35px 0px;   /* espace entre le header et le main */
-    padding: 0px 50px;  /* position du main par rapport aux marges */
-}
-
-h1{
-    font-size: 22px;
-    height: 26px;
-    margin-bottom: 8px; /* espace entre le titre et le paragraphe */
-}
-
-.headline{  /* dimensions du headline par rapport a la maquette */
-    height: 53px;
-    margin-bottom: 35px;
-}
 
