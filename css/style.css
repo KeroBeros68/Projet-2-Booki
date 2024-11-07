@@ -19,6 +19,8 @@ body{   /* centre le contenu sur la page */
     width: 100%;
     max-width: 1440px; /* taille max de la page */
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
