@@ -357,3 +357,24 @@ h1{
     padding: 20px 19px;
     font-size: 16px;
 }
+
+/****** Footer ***********/
+
+footer{
+    background-color: var(--main-bg-color);
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.secttionFooter{
+    width: 33%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secttionFooter h2{
+    font-size: 18px;
+}
