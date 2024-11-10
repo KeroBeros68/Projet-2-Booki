@@ -41,7 +41,6 @@ a {
 header{
     display: flex;
     justify-content: space-between;
-    height: 79px;
 }
 
 .logo{
@@ -80,17 +79,12 @@ main{
 
 h1{
     font-size: 22px;
-    height: 26px;
     margin-bottom: 8px; /* espace entre le titre et le paragraphe */
-}
-
-.headline{  /* dimensions du headline par rapport a la maquette */
-    height: 53px;
 }
 
 /** recherche **/
 
-.formRecherche{  /* dimensions du bloc recherche + mise en ligne des éléments */
+.rechercheDesktop{  /* dimensions du bloc recherche + mise en ligne des éléments */
     display: flex;
     flex-direction: row;
     width: 377px;
@@ -103,7 +97,7 @@ h1{
     border: var(--main-bg-color) 1px solid;
     border-radius: 15px 0px 0px 15px;
     background-color: var(--main-bg-color);
-    color: inherit;
+    color: inherit; /* icone en noir */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,6 +148,7 @@ h1{
 }
 
 .filtres{
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -234,7 +229,7 @@ h1{
     justify-content: space-between;
 }
 
-.hebergementsAndPopulaires section {
+.hebergements,.populaires {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -292,6 +287,12 @@ h1{
     gap: 30px;
 }
 
+.grpPopulaires{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .populaireTitle{
     display: flex;
     justify-content: space-between;
@@ -343,7 +344,7 @@ h1{
 }
 
 .grpActivites .card{
-    padding: 0;
+    padding: 0; /* retire le bandeau blanc de la card autour de l'image */
 }
 
 .activites img{
@@ -362,12 +363,12 @@ h1{
 
 footer{
     background-color: var(--main-bg-color);
-    margin: 0px 50px;
+    margin: 0px 50px; /* position du footer par rapport aux marges */
     display: flex;
     flex-direction: row;
 }
 
-.secttionFooter{
+footer div{
     width: 33%;
     padding: 20px;
     display: flex;
@@ -375,6 +376,132 @@ footer{
     gap: 15px;
 }
 
-.secttionFooter h2{
+footer h2{
     font-size: 18px;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergementsAndPopulaires {    /* passage en vertical */
+        flex-direction: column;
+    }
+
+    .hebergements{  /* section hébergement prend tout l'écran */
+        width: 100%;
+    }
+
+    .populaires {   /* section populaire occupe tout l'écran + ecart avec la section hébergements */
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .grpPopulaires{ /* passage en horizontale des cards populaires */
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .populaires a{  /* redimensionnement des cards populaires */
+        width: 33%;
+    }
+
+    .activites img{ /* redimensionnement des cards activités */
+        height: 200px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav{
+        width: 100%;
+        padding: 0;
+    }
+    nav a{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a:hover{
+        border-bottom: var(--main-color) 2px solid;
+        border-top: none;
+    }
+
+    main{
+        padding: 0px;
+    }
+
+    .infoBox{
+        padding: 0px 15px;
+    }
+    .rechercheDesktop{
+        display: none;
+    }
+
+    .filterBar{
+        height: 161px;
+        flex-direction: column;
+    }
+
+    .filtres{
+        width: 50%;
+    }
+
+    .hebergementsAndPopulaires{
+        flex-direction: column-reverse;
+    }
+
+    .hebergementsAndPopulaires section {
+        border-radius: 0px;
+    }
+
+    .populaires{
+        margin: 0px;
+        background-color: var(--main-bg-color);
+    }
+
+    .grpPopulaires{
+        flex-direction: column;
+    }
+
+    .grpPopulaires a{
+        width: 100%;
+    }
+
+    .hebergements{
+        background-color: inherit;
+    }
+    .grpCards{
+        flex-direction: column;
+    }
+
+    .grpCards a{
+        width: 100%;
+    }
+
+    .grpActivites{
+        flex-direction: column;
+    }
+
+    .grpActivites a{
+        width: 100%;
+    }   
+    
+    footer{
+        margin: 0;
+        padding: 30px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    footer div{
+        padding: 0px;
+        width: 100%;
+    }
 }
