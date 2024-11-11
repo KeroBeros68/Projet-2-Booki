@@ -90,7 +90,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     height: 49px;
 }
 
-.rechercheMobile{
+.recherche-mobile{
     display: none;
 }
 
@@ -106,15 +106,15 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     align-items: center;
 }
 
-.champsContainer{
-    width: 195px;
+.champs-container{
+    width: 100%;
     border-top: var(--main-bg-color) 1px solid;
     border-bottom: var(--main-bg-color) 1px solid;
     display: flex;
     align-items: center;
 }
 
-.champsRecherche{   /* champs de saisie de la recherche */
+.champs-recherche{   /* champs de saisie de la recherche */
     border: none;
     width: 195px;
     font-size: 18px;
@@ -123,7 +123,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     padding-left: 24px;
 }
 
-.rechercheDesktop{  /* validation de la recherche */
+.recherche-desktop{  /* validation de la recherche */
     width: 132px;
     height: 49px;
     background-color: var(--main-color);
@@ -138,21 +138,21 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
 
 /** Filtres **/
 
-.filterBar{
+.filter-bar{
     height: 50px;
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
-.filterBar h2{
+.filter-bar h2{
     width: 54px;
     display: flex;
     align-items: center;
     font-size: 18px;
 }
 
-.groupeFiltres{
+.groupe-filtres{
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -184,7 +184,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
 
 /** infoBar **/
 
-.infoBar{
+.info-bar{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -215,7 +215,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     object-fit: cover;
 }
 
-.cardTitle {
+.card-title {
     font-size: 16px;
 }
 
@@ -223,11 +223,11 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     font-weight: 700;
 }
 
-.neutralStar {
+.neutral-star {
     color: var(--main-bg-color)
 }
 
-.grpCards{
+.grp-cards{
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -235,7 +235,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
 
 /** hebergements et populaires **/
 
-.hebergementsAndPopulaires{
+.hebergements-populaires{
     display: flex;
     justify-content: space-between;
 }
@@ -247,7 +247,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     box-sizing: border-box;
 }
 
-.hebergementsAndPopulaires h2{
+.hebergements-populaires h2{
     font-size: 22px;
 }
 
@@ -259,7 +259,7 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     gap: 30px;
 }
 
-.grpCards a{
+.grp-cards a{
     width: 33%;
 }
 .hebergements img{
@@ -273,18 +273,18 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     padding-bottom: 15px;
 }
 
-.hebergements .cardContent{
+.hebergements .card-content{
     padding: 0px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.cardContent p{
+.card-content p{
     font-size: 14px;
 }
 
-.afficherPlus{
+.afficher-plus{
     font-size: 18px;
     font-weight: 700;
 }
@@ -298,18 +298,18 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     gap: 30px;
 }
 
-.grpPopulaires{
+.grp-populaires{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.populaireTitle{
+.populaire-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.populaireTitle i{
+.populaire-title i{
     font-size: 18px;
 }
 
@@ -324,14 +324,14 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     border-bottom-left-radius: 20px;
 }
 
-.populaires .cardContent{
+.populaires .card-content{
     padding: 10px 5px 5px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.cardText{
+.card-text{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -343,18 +343,18 @@ form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     padding: 30px;
 }
 
-.grpActivites{
+.grp-activites{
     display: flex;
     flex-direction: row;
     gap: 30px;
     margin-top: 30px;
 }
 
-.grpActivites a{
+.grp-activites a{
     width: 25%;
 }
 
-.grpActivites .card{
+.grp-activites .card{
     padding: 0; /* retire le bandeau blanc de la card autour de l'image */
 }
 
@@ -396,7 +396,7 @@ footer h2{
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .hebergementsAndPopulaires {    /* passage en vertical */
+    .hebergements-populaires {    /* passage en vertical */
         flex-direction: column;
     }
 
@@ -409,7 +409,7 @@ footer h2{
         margin-top: 50px;
     }
 
-    .grpPopulaires{ /* passage en horizontale des cards populaires */
+    .grp-populaires{ /* passage en horizontale des cards populaires */
         flex-direction: row;
         gap: 20px;
     }
@@ -453,11 +453,15 @@ footer h2{
     .infoBox{
         padding: 0px 15px;
     }
-    .rechercheDesktop{
+
+    form{
+        width: 100%;
+    }
+    .recherche-desktop{
         display: none;
     }
 
-    .rechercheMobile{
+    .recherche-mobile{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -471,7 +475,7 @@ footer h2{
         border-right: none;
     }
 
-    .rechercheMobile i{
+    .recherche-mobile i{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -485,14 +489,11 @@ footer h2{
 
     }
 
-    .champsContainer{
-        width: 276px;
-    }
     .fa-magnifying-glass{
         color: white;
     }
 
-    .filterBar{
+    .filter-bar{
         height: 161px;
         flex-direction: column;
     }
@@ -501,11 +502,11 @@ footer h2{
         width: 50%;
     }
 
-    .hebergementsAndPopulaires{
+    .hebergements-populaires{
         flex-direction: column-reverse;
     }
 
-    .hebergementsAndPopulaires section {
+    .hebergements-populaires section {
         border-radius: 0px;
     }
 
@@ -514,30 +515,30 @@ footer h2{
         background-color: var(--main-bg-color);
     }
 
-    .grpPopulaires{
+    .grp-populaires{
         flex-direction: column;
     }
 
-    .grpPopulaires a{
+    .grp-populaires a{
         width: 100%;
     }
 
     .hebergements{
         background-color: inherit;
     }
-    .grpCards{
+    .grp-cards{
         flex-direction: column;
     }
 
-    .grpCards a{
+    .grp-cards a{
         width: 100%;
     }
 
-    .grpActivites{
+    .grp-activites{
         flex-direction: column;
     }
 
-    .grpActivites a{
+    .grp-activites a{
         width: 100%;
     }   
     
