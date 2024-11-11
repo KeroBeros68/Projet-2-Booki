@@ -84,11 +84,14 @@ h1{
 
 /** recherche **/
 
-.rechercheDesktop{  /* dimensions du bloc recherche + mise en ligne des éléments */
+form{  /* dimensions du bloc recherche + mise en ligne des éléments */
     display: flex;
-    flex-direction: row;
     width: 377px;
     height: 49px;
+}
+
+.rechercheMobile{
+    display: none;
 }
 
 .fa-location-dot{   /* icone loupe */
@@ -103,22 +106,30 @@ h1{
     align-items: center;
 }
 
-.champsRecherche{   /* champs de saisie de la recherche */
+.champsContainer{
     width: 195px;
-    height: 47px;
-    padding: 0px;   /* ajuste la border pour coller a celle du bouton et de l'icone */
-    border: var(--main-bg-color) 1px solid;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
+    border-top: var(--main-bg-color) 1px solid;
+    border-bottom: var(--main-bg-color) 1px solid;
+    display: flex;
+    align-items: center;
 }
 
-.btnRecherche{  /* validation de la recherche */
-    width: 130px;
+.champsRecherche{   /* champs de saisie de la recherche */
+    border: none;
+    width: 195px;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    padding-left: 24px;
+}
+
+.rechercheDesktop{  /* validation de la recherche */
+    width: 132px;
     height: 49px;
     background-color: var(--main-color);
     border: var(--main-color) 1px solid;
     border-radius: 0px 15px 15px 0px;
+    padding: 15px 16px 15px 16px;
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -184,7 +195,7 @@ h1{
     width: 22px;
     height: 22px;
     border: #D9D9D9 1px solid;
-    border-radius: 45px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,7 +438,9 @@ footer h2{
         width: 100%;
         justify-content: center;
         align-items: center;
+        border-bottom: var(--main-bg-color) 2px solid
     }
+
     nav a:hover{
         border-bottom: var(--main-color) 2px solid;
         border-top: none;
@@ -442,6 +455,41 @@ footer h2{
     }
     .rechercheDesktop{
         display: none;
+    }
+
+    .rechercheMobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 51px;
+        height: 49px;
+        padding: 0;
+        border-radius: 0px 15px 15px 0px;
+        border: var(--main-bg-color) 1px solid;
+        background-color: white;
+        border-left: none;
+        border-right: none;
+    }
+
+    .rechercheMobile i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-size: large;
+        width: 49px;
+        height: 49px;
+        border-radius: 15px;
+        background-color: var(--main-color);
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+    }
+
+    .champsContainer{
+        width: 276px;
+    }
+    .fa-magnifying-glass{
+        color: white;
     }
 
     .filterBar{

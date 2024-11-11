@@ -34,10 +34,15 @@
                 </div>
 
                 <div class="margeBot">      
-                    <form class="rechercheDesktop" method="get" action="">
+                    <form method="get" action="">
                         <label for="recherche" ><i class="fa-solid fa-location-dot fa-lg"></i></label>
-                        <input class="champsRecherche" type="text" name="recherche" id="recherche" placeholder="Marseille, France">
-                        <input class="btnRecherche" type="submit" value="Recherche">
+                        <div class="champsContainer">                        
+                            <input class="champsRecherche" type="text" name="recherche" id="recherche" placeholder="Marseille, France">
+                        </div>
+                        <input class="rechercheDesktop" type="submit" value="Recherche">
+                        <button class="rechercheMobile" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
 
