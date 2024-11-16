@@ -8,6 +8,12 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --font-size-1: 22px; /* size h1, h2-populaire*/
+    --font-size-2: 18px; /* size recherche-desktop, champs-recherche, filter-bar h2, afficher-plus, footer h2 */
+    --font-size-3: 16px; /* card-title, activites h3 */
+    --font-size-4: 14px; /* card-content p */
+    --font-size-5: 17px; /* filtres */
+    --font-weight: 700; /* afficher-plus, champs-recherche, recherche-desktop, filtres, euro */
 }
 
 .fa-solid {
@@ -36,6 +42,8 @@ a {
 .margeBot{
     margin-bottom: 35px;
 }
+
+
 
 /****** Header ***********/
 
@@ -79,7 +87,7 @@ main{
 }
 
 h1{
-    font-size: 22px;
+    font-size: var(--font-size-1);
     margin-bottom: 8px; /* espace entre le titre et le paragraphe */
 }
 
@@ -122,21 +130,20 @@ label{
 .champs-recherche{   /* champs de saisie de la recherche */
     width: 100%; /* Remplit le conteneur */
     border: none;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight);
     outline: none;
     padding: 0;
 }
 
 .recherche-desktop{  /* validation de la recherche */
     flex: 0 0 132px; /* Largeur fixe pour le bouton */
-    height: 100%; /* Adapte la hauteur à celle du formulaire */
     background-color: var(--main-color);
     border: var(--main-color) 1px solid;
     border-radius: 0 15px 15px 0;
     color: white;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight);
     cursor: pointer;
     text-align: center;
 }
@@ -154,7 +161,7 @@ label{
     width: 54px;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: var(--font-size-2);
 }
 
 .groupe-filtres{
@@ -173,8 +180,8 @@ label{
     border-radius: 25px;
     padding: 4px 19px 4px 19px;
     gap: 10px;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight);
 }
 
 .filtres i{
@@ -227,11 +234,11 @@ label{
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: var(--font-size-3);
 }
 
 .euro {
-    font-weight: 700;
+    font-weight: var(--font-weight);
 }
 
 .neutral-star {
@@ -259,7 +266,7 @@ label{
 }
 
 .hebergements-populaires h2{
-    font-size: 22px;
+    font-size: var(--font-size-1);
 }
 
 /** Hebergements **/
@@ -292,12 +299,12 @@ label{
 }
 
 .card-content p{
-    font-size: 14px;
+    font-size: var(--font-size-4);
 }
 
 .afficher-plus{
-    font-size: 18px;
-    font-weight: 700;
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight);
 }
 
 /** Populaires **/
@@ -321,7 +328,7 @@ label{
     align-items: center;
 }
 .populaire-title i{
-    font-size: 18px;
+    font-size: large;
 }
 
 .populaires .card{
@@ -378,7 +385,7 @@ label{
 
 .activites h3{
     padding: 20px 19px;
-    font-size: 16px;
+    font-size: var(--font-size-3);
 }
 
 /****** Footer ***********/
@@ -399,7 +406,7 @@ footer div{
 }
 
 footer h2{
-    font-size: 18px;
+    font-size: var(--font-size-2);
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -477,7 +484,6 @@ footer h2{
         justify-content: center;
         align-items: center;
         width: 51px;
-        height: 49px;
         padding: 0;
         border-radius: 0px 15px 15px 0px;
         border: var(--main-bg-color) 1px solid;
