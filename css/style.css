@@ -361,6 +361,10 @@ label{
     padding: 30px;
 }
 
+.activites h2{
+    font-size: var(--font-size-1);
+}
+
 .grp-activites{
     display: flex;
     flex-direction: row;
