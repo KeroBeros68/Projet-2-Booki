@@ -111,7 +111,6 @@ label{
     background-color: var(--main-bg-color);
     border: var(--main-bg-color) 1px solid;
     border-radius: 15px 0 0 15px;
-    height: 100%; /* S'aligne avec le formulaire */
 }
 
 .fa-location-dot{   /* icone loupe */
